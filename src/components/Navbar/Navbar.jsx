@@ -22,14 +22,16 @@ const Navbar = () => {
   return (
     <section className="flex border shadow-xl border-Base w-[70%] sm:w-[100%] lg:w-[100%] mx-auto justify-between">
       {/* Logo  */}
-      <div>
-        <img
-          alt={LogoData.logoAlt}
-          src={LogoData.logoSrc}
-          width={LogoData.logoWidth}
-          height={LogoData.logoHeight}
-        />
-      </div>
+      <Link to={LogoData.href}>
+        <div>
+          <img
+            alt={LogoData.logoAlt}
+            src={LogoData.logoSrc}
+            width={LogoData.logoWidth}
+            height={LogoData.logoHeight}
+          />
+        </div>
+      </Link>
       {/* Main Nav Links  */}
       <section
         className="absolute h-full w-[25vw] sm:w-[80vw]  top-0 right-0 translate-x-96 bg-primary text-center z-10 transition-all"

@@ -13,6 +13,7 @@ export const LogoData = {
   logoAlt: 'logo',
   logoWidth: 200,
   logoHeight: 150,
+  href: '/home',
 };
 
 export const NavLinksDataPrime = [
