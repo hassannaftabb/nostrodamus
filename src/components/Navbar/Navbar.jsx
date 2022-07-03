@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import {
   NavLinksDataPrime,
   LogoData,
@@ -8,7 +8,16 @@ import { Link } from 'react-router-dom';
 import { BsArrowRight } from 'react-icons/bs';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef();
+  const toggleDropdown = () => {
+    if (menuRef.current.classList.contains('translate-x-96')) {
+      menuRef.current.classList.remove('translate-x-96');
+      menuRef.current.classList.add('translate-x-0');
+    } else if (menuRef.current.classList.contains('translate-x-0')) {
+      menuRef.current.classList.remove('translate-x-0');
+      menuRef.current.classList.add('translate-x-96');
+    }
+  };
   return (
     <section className="flex border shadow-xl border-Base w-[70%] sm:w-[100%] mx-auto justify-between">
       {/* Logo  */}
@@ -20,22 +29,17 @@ const Navbar = () => {
           height={LogoData.logoHeight}
         />
       </div>
-
       {/* Main Nav Links  */}
-      {isOpen ? (
-        <BsArrowRight
-          className="text-Base text-3xl font-bold cursor-pointer z-20 absolute top-20 right-8"
-          onClick={() => setIsOpen(false)}
-        />
-      ) : (
-        ''
-      )}
       <section
-        className={`absolute h-full w-[25vw] sm:w-[80vw] lg:w-[80vw] md:w-[40vw] top-0 right-0 translate-x-96 bg-primary text-center z-10 transition-all ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
+        className="absolute h-full w-[25vw] sm:w-[80vw] lg:w-[80vw] md:w-[40vw] top-0 right-0 translate-x-96 bg-primary text-center z-50 transition-all"
+        ref={menuRef}
       >
         <ul className="flex flex-col w-full items-center space-y-4 mt-8 ">
+          <BsArrowRight
+            className="text-Base text-3xl font-bold cursor-pointer"
+            onClick={toggleDropdown}
+          />
+
           {NavLinksDataPrime.map((navlinkP, i) => {
             return (
               <li
@@ -64,7 +68,7 @@ const Navbar = () => {
       {/* Ham Menu  */}
       <button
         className="mx-8 p-2.5 h-[90%] my-auto text-gray-600 transition-all bg-gray-100 rounded hover:text-gray-600/75 hover:shadow-lg hover:shadow-primary"
-        onClick={() => setIsOpen(true)}
+        onClick={toggleDropdown}
       >
         <span className="sr-only">Toggle menu</span>
         <svg
