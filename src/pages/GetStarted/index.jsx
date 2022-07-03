@@ -4,16 +4,21 @@ import { useNavigate } from 'react-router-dom';
 
 const GetStarted = () => {
   const [screen, setScreen] = useState(1);
+
+  //Navigate if screens completed
   const navigate = useNavigate();
   useEffect(() => {
-    if (localStorage.getItem('screen') == 0) {
+    if (localStorage.getItem('screen') === 0) {
       navigate('/home');
     }
   }, [navigate, screen]);
 
+  //Screen refs
   const screen1 = useRef();
   const screen2 = useRef();
   const screen3 = useRef();
+
+  //Increments in screens (for animations)
   const incrementScreen1 = (e) => {
     screen1.current.classList.remove('translate-x-0');
     screen1.current.classList.add('translate-x-full');
@@ -31,9 +36,10 @@ const GetStarted = () => {
     }, 500);
   };
 
+  //Skip screen function
   const skipScreens = () => {
     const newScreen = 0;
-    localStorage.setItem('screen', JSON.stringify(newScreen));
+    localStorage.setItem('screen', newScreen);
     navigate('/home');
   };
 

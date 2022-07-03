@@ -28,15 +28,16 @@ function App() {
       <div>
         <Navbar />
         <Routes>
-          <Route path="/" element={<GetStarted />} />
+          <Route path="/" element={<GetStarted />} /> {/*DONE*/}
           <Route path="/home" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/feedback" element={<Feedback />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/login" element={<Login />} /> {/*DONE*/}
+          <Route path="/signup" element={<SignUp />} /> {/*DONE*/}
+          <Route path="/feedback" element={<Feedback />} /> {/*DONE*/}
+          <Route path="/profile" element={<Profile />} /> {/*DONE*/}
           <Route path="/passwordrecovery" element={<PasswordRecovery />} />
+          {/*DONE*/}
           <Route path="/otp" element={<OTP />} />
-          <Route path="/setnewpassword" element={<NewPass />} />
+          <Route path="/setnewpassword" element={<NewPass />} /> {/*DONE*/}
           <Route path="/search" element={<Search />} />
           <Route path="/crypto" element={<Crypto />} />
           <Route path="/reports" element={<Reports />} />

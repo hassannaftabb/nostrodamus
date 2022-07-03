@@ -3,7 +3,8 @@ import {
   NavLinksDataPrime,
   LogoData,
   NavLinksDataSec,
-  NavLinksDataThird,
+  NavLinksDataOptional,
+  NavLinksUnLogged,
 } from '../../Static/Navbar/NavData';
 import { Link } from 'react-router-dom';
 import { BsArrowRight } from 'react-icons/bs';
@@ -37,6 +38,7 @@ const Navbar = () => {
         className="absolute h-full w-[25vw] sm:w-[80vw]  top-0 right-0 translate-x-96 bg-primary text-center z-10 transition-all"
         ref={menuRef}
       >
+        {/* (For Logged In User) */}
         <ul className="flex flex-col w-full items-center space-y-4 mt-8 ">
           <BsArrowRight
             className="text-Base text-3xl font-bold cursor-pointer hover:scale-150 transition-all"
@@ -45,7 +47,7 @@ const Navbar = () => {
 
           {NavLinksDataPrime.map((navlinkP, i) => {
             return (
-              <Link to={navlinkP.href}>
+              <Link to={navlinkP.href} onClick={toggleDropdown}>
                 <li
                   key={i}
                   className="flex items-center space-x-2 text-xl text-Base hover:bg-Base/50 p-2 rounded-md"
@@ -59,7 +61,7 @@ const Navbar = () => {
           <hr />
           {NavLinksDataSec.map((navlinkS, i) => {
             return (
-              <Link to={navlinkS.href}>
+              <Link to={navlinkS.href} onClick={toggleDropdown}>
                 <li
                   key={i}
                   className="flex items-center space-x-2 text-xl text-Base hover:bg-Base/50 p-2 rounded-md"
@@ -71,9 +73,9 @@ const Navbar = () => {
             );
           })}
           <div className="w-full flex items-center justify-center absolute bottom-4 text-center">
-            {NavLinksDataThird.map((navlinkT, i) => {
+            {NavLinksDataOptional.map((navlinkT, i) => {
               return (
-                <Link to={navlinkT.href}>
+                <Link to={navlinkT.href} onClick={toggleDropdown}>
                   <li
                     key={i}
                     className="flex mx-auto items-center space-x-2 text-xl text-Base hover:bg-Base/50 p-2 rounded-md "
@@ -86,6 +88,28 @@ const Navbar = () => {
             })}
           </div>
         </ul>
+        {/* For LoggedOut User  (Un Comment to use)*/}
+        {/* <ul className="flex flex-col w-full items-center space-y-4 mt-8 ">
+          <BsArrowRight
+            className="text-Base text-3xl font-bold cursor-pointer hover:scale-150 transition-all"
+            onClick={toggleDropdown}
+          />
+
+          {NavLinksUnLogged.map((navlinkUL, i) => {
+            return (
+              <Link to={navlinkUL.href} onClick={toggleDropdown}>
+                <li
+                  key={i}
+                  className="flex items-center space-x-2 text-xl text-Base hover:bg-Base/50 p-2 rounded-md"
+                >
+                  {navlinkUL.icon}
+                  {navlinkUL.title}
+                </li>
+              </Link>
+            );
+          })}
+          <hr />
+        </ul> */}
       </section>
       {/* Ham Menu  */}
       <button

@@ -1,9 +1,9 @@
-import { FaHome, FaRegUserCircle } from 'react-icons/fa';
+import { FaHome, FaRegAddressCard, FaRegUserCircle } from 'react-icons/fa';
 import { BsSearch } from 'react-icons/bs';
 import { SiBitcoinsv } from 'react-icons/si';
 import { VscGraphLine } from 'react-icons/vsc';
 import { MdFeedback } from 'react-icons/md';
-import { FiSettings, FiLogOut } from 'react-icons/fi';
+import { FiSettings, FiLogOut, FiLogIn } from 'react-icons/fi';
 export const NavBarTheme = {
   color: 'primary',
 };
@@ -64,11 +64,38 @@ export const NavLinksDataSec = [
   },
 ];
 
-export const NavLinksDataThird = [
+export const NavLinksDataOptional = [
   {
     title: 'Logout',
     href: '#',
     color: '',
     icon: <FiLogOut className="text-2xl mr-2" />,
+  },
+];
+
+export const NavLinksUnLogged = [
+  {
+    title: 'Login',
+    href: '/login',
+    color: '',
+    icon: <FiLogIn className="text-2xl mr-2" />,
+  },
+  {
+    title: 'SignUp',
+    href: '/signup',
+    color: '',
+    icon: <FaRegAddressCard className="text-2xl mr-2" />,
+  },
+  {
+    title: 'Search',
+    href: '/search',
+    color: '',
+    icon: <BsSearch className="text-2xl mr-2" />,
+  },
+  {
+    title: 'Crypto',
+    href: '/crypto',
+    color: '',
+    icon: <SiBitcoinsv className="text-2xl mr-2" />,
   },
 ];
