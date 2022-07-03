@@ -19,7 +19,7 @@ const Navbar = () => {
     }
   };
   return (
-    <section className="flex border shadow-xl border-Base w-[70%] sm:w-[100%] mx-auto justify-between">
+    <section className="flex border shadow-xl border-Base w-[70%] sm:w-[100%] lg:w-[100%] mx-auto justify-between">
       {/* Logo  */}
       <div>
         <img
@@ -31,7 +31,7 @@ const Navbar = () => {
       </div>
       {/* Main Nav Links  */}
       <section
-        className="absolute h-full w-[25vw] sm:w-[80vw] lg:w-[80vw] md:w-[40vw] top-0 right-0 translate-x-96 bg-primary text-center z-50 transition-all"
+        className="absolute h-full w-[25vw] sm:w-[80vw]  top-0 right-0 translate-x-96 bg-primary text-center z-10 transition-all"
         ref={menuRef}
       >
         <ul className="flex flex-col w-full items-center space-y-4 mt-8 ">
