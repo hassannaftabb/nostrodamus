@@ -20,25 +20,25 @@ export const NavLinksDataPrime = [
     title: 'Home',
     href: '/home',
     color: '',
-    icon: <FaHome className="text-2xl" />,
+    icon: <FaHome className="text-2xl mr-2" />,
   },
   {
     title: 'Search',
     href: '/search',
     color: '',
-    icon: <BsSearch className="text-2xl" />,
+    icon: <BsSearch className="text-2xl mr-2" />,
   },
   {
     title: 'Crypto',
     href: '/crypto',
     color: '',
-    icon: <SiBitcoinsv className="text-2xl" />,
+    icon: <SiBitcoinsv className="text-2xl mr-2" />,
   },
   {
     title: 'Reports',
     href: '/reports',
     color: '',
-    icon: <VscGraphLine className="text-2xl" />,
+    icon: <VscGraphLine className="text-2xl mr-2" />,
   },
 ];
 
@@ -47,24 +47,27 @@ export const NavLinksDataSec = [
     title: 'Feedback',
     href: '/feedback',
     color: '',
-    icon: <MdFeedback className="text-2xl" />,
+    icon: <MdFeedback className="text-2xl mr-2" />,
   },
   {
     title: 'Settings',
     href: '/settings',
     color: '',
-    icon: <FiSettings className="text-2xl" />,
+    icon: <FiSettings className="text-2xl mr-2" />,
   },
   {
     title: 'Profile',
     href: '/profile',
     color: '',
-    icon: <FaRegUserCircle className="text-2xl" />,
+    icon: <FaRegUserCircle className="text-2xl mr-2" />,
   },
+];
+
+export const NavLinksDataThird = [
   {
     title: 'Logout',
     href: '#',
     color: '',
-    icon: <FiLogOut className="text-2xl" />,
+    icon: <FiLogOut className="text-2xl mr-2" />,
   },
 ];

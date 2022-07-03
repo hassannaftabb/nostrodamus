@@ -3,6 +3,7 @@ import {
   NavLinksDataPrime,
   LogoData,
   NavLinksDataSec,
+  NavLinksDataThird,
 } from '../../Static/Navbar/NavData';
 import { Link } from 'react-router-dom';
 import { BsArrowRight } from 'react-icons/bs';
@@ -36,33 +37,52 @@ const Navbar = () => {
       >
         <ul className="flex flex-col w-full items-center space-y-4 mt-8 ">
           <BsArrowRight
-            className="text-Base text-3xl font-bold cursor-pointer"
+            className="text-Base text-3xl font-bold cursor-pointer hover:scale-150 transition-all"
             onClick={toggleDropdown}
           />
 
           {NavLinksDataPrime.map((navlinkP, i) => {
             return (
-              <li
-                key={i}
-                className="flex items-center space-x-2 text-xl text-Base"
-              >
-                {navlinkP.icon}
-                <Link to={navlinkP.href}>{navlinkP.title}</Link>
-              </li>
+              <Link to={navlinkP.href}>
+                <li
+                  key={i}
+                  className="flex items-center space-x-2 text-xl text-Base hover:bg-Base/50 p-2 rounded-md"
+                >
+                  {navlinkP.icon}
+                  {navlinkP.title}
+                </li>
+              </Link>
             );
           })}
           <hr />
           {NavLinksDataSec.map((navlinkS, i) => {
             return (
-              <li
-                key={i}
-                className="flex items-center space-x-2 text-xl text-Base"
-              >
-                {navlinkS.icon}
-                <Link to={navlinkS.href}>{navlinkS.title}</Link>
-              </li>
+              <Link to={navlinkS.href}>
+                <li
+                  key={i}
+                  className="flex items-center space-x-2 text-xl text-Base hover:bg-Base/50 p-2 rounded-md"
+                >
+                  {navlinkS.icon}
+                  {navlinkS.title}
+                </li>
+              </Link>
             );
           })}
+          <div className="w-full flex items-center justify-center absolute bottom-4 text-center">
+            {NavLinksDataThird.map((navlinkT, i) => {
+              return (
+                <Link to={navlinkT.href}>
+                  <li
+                    key={i}
+                    className="flex mx-auto items-center space-x-2 text-xl text-Base hover:bg-Base/50 p-2 rounded-md "
+                  >
+                    {navlinkT.icon}
+                    {navlinkT.title}
+                  </li>
+                </Link>
+              );
+            })}
+          </div>
         </ul>
       </section>
       {/* Ham Menu  */}
