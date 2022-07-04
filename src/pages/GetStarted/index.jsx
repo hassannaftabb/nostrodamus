@@ -8,7 +8,7 @@ const GetStarted = () => {
   //Navigate if screens completed
   const navigate = useNavigate();
   useEffect(() => {
-    if (localStorage.getItem('screen') === 0) {
+    if (localStorage.getItem('screen') == 0) {
       navigate('/home');
     }
   }, [navigate, screen]);

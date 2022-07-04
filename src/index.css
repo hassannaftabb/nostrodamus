@@ -8,3 +8,7 @@ html, body{
     position: relative;
     overflow-x: hidden;
 }
+
+body{
+    background-color: #E2DFD2;
+}

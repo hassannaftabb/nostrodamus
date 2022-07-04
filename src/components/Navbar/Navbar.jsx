@@ -21,7 +21,7 @@ const Navbar = () => {
     }
   };
   return (
-    <section className="flex border shadow-xl border-Base w-[70%] sm:w-[100%] lg:w-[100%] mx-auto justify-between">
+    <section className="flex border shadow-xl border-Base w-[70%] sm:w-[100%] lg:w-[100%] mx-auto justify-between bg-white">
       {/* Logo  */}
       <Link to={LogoData.href}>
         <div>
@@ -35,7 +35,7 @@ const Navbar = () => {
       </Link>
       {/* Main Nav Links  */}
       <section
-        className="absolute h-full w-[25vw] sm:w-[80vw]  top-0 right-0 translate-x-96 bg-primary text-center z-10 transition-all"
+        className="absolute h-full w-[25vw] lg:w-[35vw] sm:w-[80vw]  top-0 right-0 translate-x-96 bg-primary text-center z-10 transition-all"
         ref={menuRef}
       >
         {/* (For Logged In User) */}
@@ -88,8 +88,8 @@ const Navbar = () => {
             })}
           </div>
         </ul>
-        {/* For LoggedOut User  (Un Comment to use)*/}
-        {/* <ul className="flex flex-col w-full items-center space-y-4 mt-8 ">
+        {/* For LoggedOut User  (remove "hidden class from ul conatiner (root)  below" to use)*/}
+        <ul className="flex flex-col w-full items-center space-y-4 mt-8 hidden">
           <BsArrowRight
             className="text-Base text-3xl font-bold cursor-pointer hover:scale-150 transition-all"
             onClick={toggleDropdown}
@@ -109,7 +109,7 @@ const Navbar = () => {
             );
           })}
           <hr />
-        </ul> */}
+        </ul>
       </section>
       {/* Ham Menu  */}
       <button

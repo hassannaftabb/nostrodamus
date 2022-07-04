@@ -25,7 +25,7 @@ const PasswordRecovery = () => {
         {/* Form  */}
         <form
           action=""
-          className="p-8 mt-6 mb-0 space-y-4 rounded-lg shadow-lg shadow-primary border-2 border-gray-200"
+          className="p-8 mt-6 mb-0 space-y-4 rounded-lg shadow-lg shadow-primary border-2 border-gray-200 bg-white"
         >
           <div>
             <label htmlFor="email" className="text-lg font-medium">

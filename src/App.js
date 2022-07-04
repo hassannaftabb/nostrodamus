@@ -17,6 +17,7 @@ import Navbar from './components/Navbar/Navbar';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import QuickBar from './components/QuickBar/QuickBar';
 
 function App() {
   useEffect(() => {
@@ -43,6 +44,7 @@ function App() {
           <Route path="/reports" element={<Reports />} />
           <Route path="/settings" element={<Settings />} />
         </Routes>
+        <QuickBar />
       </div>
     </BrowserRouter>
   );

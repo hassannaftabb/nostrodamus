@@ -25,7 +25,7 @@ const Profile = () => {
             {Text.subText}
           </p>
         </div>
-        <div className="p-12 flex flex-col items-center justify-center border-4 border-primary mt-4 rounded-lg">
+        <div className="p-12 flex flex-col items-center justify-center border-4 border-primary mt-4 rounded-lg bg-white">
           <div className="text-2xl font-bold">Hassan Aftab</div>
           <div className="text-xl font-medium text-primary">
             hassannaftabb@gmail.com

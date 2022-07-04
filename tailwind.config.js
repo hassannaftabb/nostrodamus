@@ -10,7 +10,7 @@ module.exports = {
       },
     },
     screens: {
-      sm: { min: '350px', max: '420px' },
+      sm: { min: '280px', max: '420px' },
       lg: { min: '421px', max: '999px' },
       md: { min: '1000px', max: '1120px' },
       xl: { min: '1121px' },
