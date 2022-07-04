@@ -7,7 +7,7 @@ import {
 
 const Profile = () => {
   return (
-    <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+    <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8 mb-12">
       <div className="max-w-lg mx-auto">
         {/* Image + Headings  */}
         <div className="flex items-center justify-center text-center flex-col">
